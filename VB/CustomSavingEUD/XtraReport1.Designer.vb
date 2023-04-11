@@ -1,5 +1,7 @@
-﻿Namespace CustomSavingEUD
-    Partial Public Class XtraReport1
+Namespace CustomSavingEUD
+
+    Partial Class XtraReport1
+
         ''' <summary>
         ''' Required designer variable.
         ''' </summary>
@@ -10,14 +12,14 @@
         ''' </summary>
         ''' <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
-            If disposing AndAlso (components IsNot Nothing) Then
-                components.Dispose()
+            If disposing AndAlso (Me.components IsNot Nothing) Then
+                Me.components.Dispose()
             End If
+
             MyBase.Dispose(disposing)
         End Sub
 
-        #Region "Designer generated code"
-
+'#Region "Designer generated code"
         ''' <summary>
         ''' Required method for Designer support - do not modify
         ''' the contents of this method with the code editor.
@@ -27,11 +29,11 @@
             Me.TopMargin = New DevExpress.XtraReports.UI.TopMarginBand()
             Me.BottomMargin = New DevExpress.XtraReports.UI.BottomMarginBand()
             Me.xrLabel1 = New DevExpress.XtraReports.UI.XRLabel()
-            DirectCast(Me, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me), System.ComponentModel.ISupportInitialize).BeginInit()
             ' 
             ' Detail
             ' 
-            Me.Detail.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() { Me.xrLabel1})
+            Me.Detail.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.xrLabel1})
             Me.Detail.HeightF = 100F
             Me.Detail.Name = "Detail"
             Me.Detail.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F)
@@ -63,17 +65,18 @@
             ' 
             ' XtraReport1
             ' 
-            Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() { Me.Detail, Me.TopMargin, Me.BottomMargin})
+            Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.Detail, Me.TopMargin, Me.BottomMargin})
             Me.Version = "14.2"
-            DirectCast(Me, System.ComponentModel.ISupportInitialize).EndInit()
-
+            CType((Me), System.ComponentModel.ISupportInitialize).EndInit()
         End Sub
 
-        #End Region
-
+'#End Region
         Private Detail As DevExpress.XtraReports.UI.DetailBand
+
         Private TopMargin As DevExpress.XtraReports.UI.TopMarginBand
+
         Private BottomMargin As DevExpress.XtraReports.UI.BottomMarginBand
+
         Private xrLabel1 As DevExpress.XtraReports.UI.XRLabel
     End Class
 End Namespace
