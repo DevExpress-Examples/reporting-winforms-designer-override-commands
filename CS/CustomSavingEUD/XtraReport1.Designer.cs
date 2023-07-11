@@ -59,7 +59,7 @@
             // 
             // xrLabel1
             // 
-            this.xrLabel1.Font = new System.Drawing.Font("Tahoma", 9.75F);
+            this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Tahoma", 9.75F);
             this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(9.999974F, 10.00001F);
             this.xrLabel1.Name = "xrLabel1";
             this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
