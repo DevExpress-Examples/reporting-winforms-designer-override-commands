@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
+using System;
 using System.Windows.Forms;
 using DevExpress.XtraReports.UserDesigner;
 
-namespace CustomSavingEUD
-{
+namespace CustomSavingEUD {
     public partial class Form1 : Form
     {
         public Form1() {
@@ -29,6 +22,9 @@ namespace CustomSavingEUD
             mdiController.DesignPanelLoaded +=
                 new DesignerLoadedEventHandler(mdiController_DesignPanelLoaded);
 
+            // Override the Open Command.
+            mdiController.AddCommandHandler(new OpenCommandHandler());
+
             // Open an empty report in the form.
             mdiController.OpenReport(new XtraReport1());
 
@@ -40,39 +36,8 @@ namespace CustomSavingEUD
         }
         void mdiController_DesignPanelLoaded(object sender, DesignerLoadedEventArgs e) {
             XRDesignPanel panel = (XRDesignPanel)sender;
+            // Override the Save Command.
             panel.AddCommandHandler(new SaveCommandHandler(panel));
-        }
-
-        public class SaveCommandHandler : DevExpress.XtraReports.UserDesigner.ICommandHandler {
-            XRDesignPanel panel;
-
-            public SaveCommandHandler(XRDesignPanel panel) {
-                this.panel = panel;
-            }
-
-            public void HandleCommand(DevExpress.XtraReports.UserDesigner.ReportCommand command,
-            object[] args) {
-                // Save the report.
-                Save();
-            }
-
-            public bool CanHandleCommand(DevExpress.XtraReports.UserDesigner.ReportCommand command,
-            ref bool useNextHandler) {
-                useNextHandler = !(command == ReportCommand.SaveFile ||
-                    command == ReportCommand.SaveFileAs);
-                return !useNextHandler;
-            }
-
-            void Save() {
-                // Write your custom saving here.
-                // ...
-
-                // For instance:
-                panel.Report.SaveLayout("c:\\report1.repx");
-
-                // Prevent the "Report has been changed" dialog from being shown.
-                panel.ReportState = ReportState.Saved;
-            }
         }
     }
 }
