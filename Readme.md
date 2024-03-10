@@ -3,12 +3,11 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/E4354)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-# WinForms Reporting - How to Override End-User Report Designer Commands
-
+# Reporting for WinForms - How to Override End-User Report Designer Commands
 
 This example demonstrates how to override the **Save** and **Open** commands in the WinForms End-User Report Designer.
 
-## Files to Look At
+## Files to Review
 
 * [Form1.cs](./CS/CustomSavingEUD/Form1.cs) (VB: [Form1.vb](./VB/CustomSavingEUD/Form1.vb))
 * [SaveCommandHandler.cs](./CS/CustomSavingEUD/SaveCommandHandler.cs) (VB: [SaveCommandHandler.vb](./VB/CustomSavingEUD/SaveCommandHandler.vb))
